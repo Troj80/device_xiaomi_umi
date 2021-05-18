@@ -36,3 +36,41 @@ on fs
     chown system system /sys/bus/i2c/drivers/aw8697_haptic/2-005a/f0_save
     chown system system /sys/bus/i2c/drivers/aw8697_haptic/2-005a/osc_save
     chown system system /sys/bus/i2c/drivers/aw8697_haptic/3-005a/osc_save
+
+service vendor.qti.vibrator-1-2 /system/bin/vendor.qti.hardware.vibrator@1.2-service
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+on early-fs
+    start vold
+
+on init
+    start vendor.qti.vibrator-1-2
+    
+on early-init
+    setprop recovery.perf.mode 1
+
+on property:recovery.perf.mode=1
+    write /sys/devices/system/cpu/cpu1/online 1
+    write /sys/devices/system/cpu/cpu2/online 1
+    write /sys/devices/system/cpu/cpu3/online 1
+    write /sys/devices/system/cpu/cpu4/online 1
+    write /sys/devices/system/cpu/cpu5/online 1
+    write /sys/devices/system/cpu/cpu6/online 1
+    write /sys/devices/system/cpu/cpu7/online 1
+
+on property:recovery.perf.mode=0
+    write /sys/devices/system/cpu/cpu1/online 0
+    write /sys/devices/system/cpu/cpu2/online 1
+    write /sys/devices/system/cpu/cpu3/online 0
+    write /sys/devices/system/cpu/cpu4/online 1
+    write /sys/devices/system/cpu/cpu5/online 0
+    write /sys/devices/system/cpu/cpu6/online 1
+    write /sys/devices/system/cpu/cpu7/online 0
+    
+#on property:sys.usb.config=fastboot
+    #start servicemanager
+    #start hwservicemanager
+    #restart fastbootd
