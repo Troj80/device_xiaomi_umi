@@ -132,7 +132,7 @@ TW_SUPPORT_INPUT_1_2_HAPTICS := true
 TW_NO_SCREEN_BLANK := true
 TW_Y_OFFSET := 88
 TW_H_OFFSET := -88
-TW_DEVICE_VERSION := Alex Troj SHRP A11
+TW_DEVICE_VERSION := Alex_Troj_SHRP-A11
 PLATFORM_VERSION := 20.1.0
 #TW_SCREEN_BLANK_ON_BOOT := true
 # TW_NO_SCREEN_BLANK := true
@@ -147,7 +147,7 @@ SHRP_DEVICE_CODE := umi
 # Path of your SHRP device tree
 SHRP_PATH := device/xiaomi/$(SHRP_DEVICE_CODE)
 # Maintainer name
-SHRP_MAINTAINER := Alex Troj
+SHRP_MAINTAINER := Alex_Troj
 # Recovery Type (for "About" section only)
 # Default (if not set): N/A
 SHRP_REC_TYPE := SAR
