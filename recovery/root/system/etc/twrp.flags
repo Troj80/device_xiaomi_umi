@@ -3,7 +3,7 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
 # mount point  fstype  device                             device2                flags
-/system           ext4     /dev/block/mapper/system_root                  flags=display="System";backup=1;fsflags=ro
+/system_root      ext4     /dev/block/mapper/system                       flags=display="System";backup=1;fsflags=ro
 /system_ext       ext4     /dev/block/mapper/system_ext                   flags=display="System_Ext";backup=1;fsflags=ro
 /cache            ext4     /dev/block/bootdevice/by-name/cache            flags=display="Cache";wipeingui;wipeduringfactoryreset
 /boot             emmc     /dev/block/bootdevice/by-name/boot             flags="Boot";backup=1;flashimg=1
