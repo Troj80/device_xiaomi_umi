@@ -1,5 +1,3 @@
-Copyright (C) 2021 Project 404
-
 Device configuration for Xiaomi MI 10
 =========================================
 
