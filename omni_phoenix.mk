@@ -17,15 +17,15 @@
 #
 
 # Inherit from phoenix device
-$(call inherit-product, device/xiaomi/phoenix/device.mk)
+$(call inherit-product, device/xiaomi/umi/device.mk)
 
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := phoenix
-PRODUCT_NAME := omni_phoenix
-PRODUCT_BRAND := POCO
-PRODUCT_MODEL := POCO X2
-PRODUCT_MANUFACTURER := xiaomi
-PRODUCT_RELEASE_NAME := POCO X2
+PRODUCT_DEVICE := umi
+PRODUCT_NAME := omni_umi
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := Mi 10
+PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_RELEASE_NAME := Mi 10
